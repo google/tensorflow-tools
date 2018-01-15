@@ -29,8 +29,10 @@ let indexData = ...;
 let dataData = ...;
 
 let checkpointReader = readers.getCheckpointReader();
-checkpointReader.decode(metaData, indexData, dataData).then(function() {
-  console.log('Happy checkpoint data', checkpointReader)
+checkpointReader.decode(
+  metaData, indexData, dataData
+).then(() => {
+  console.log('Happy checkpoint data', checkpointReader);
 });
 ```
 
@@ -40,9 +42,9 @@ const TensorFlowReaders = require('tensorflow-tools').readers;
 
 let checkpointReader = readers.getCheckpointReader();
 checkpointReader.decodeLocalFiles(
-  '...model.ckpt')
+  '...model.ckpt'
 ).then(() => {
-  console.log('Happy checkpoint data', checkpointReader)
+  console.log('Happy checkpoint data', checkpointReader);
 });
 ```
 
@@ -52,9 +54,9 @@ const TensorFlowReaders = require('tensorflow-tools').readers;
 
 let checkpointReader = readers.getCheckpointReader();
 checkpointReader.decodeRemoteFiles(
-  'http://...model.ckpt')
+  'http://...model.ckpt'
 ).then(() => {
-  console.log('Happy checkpoint data', checkpointReader)
+  console.log('Happy checkpoint data', checkpointReader);
 });
 ```
 
