@@ -1,0 +1,28 @@
+{
+  'root': true,
+  'extends': ['eslint:recommended', 'google'],
+  'rules': {
+    'no-unused-vars': [2, {
+      'args': 'after-used',
+      'argsIgnorePattern': '^opt_',
+      'varsIgnorePattern':'_unused$'
+    }],
+    'no-console': 0,
+    'camelcase': [0, {properties: 'never'}],
+    'new-cap': [2, {
+      'newIsCapExceptions': []
+    }],
+  },
+  'env': {
+    browser: true,
+    node: true,
+    es6: true
+  },
+  'globals': {
+    'after': true,
+    'before': true,
+    'describe': true,
+    'goog': true,
+    'it': true,
+  }
+}

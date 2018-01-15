@@ -1,0 +1,43 @@
+{
+  "name": "tensorflow-tools",
+  "version": "0.0.1",
+  "description": "Collection of manipulation tools for TensorFlow files.",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": {
+    "name": "Markus Bordihn",
+    "email": "Markus@Bordihn.de",
+    "url": "https://github.com/MarkusBordihn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Google/tensorflow-tools.git"
+  },
+    "bugs": {
+    "url": "https://github.com/Google/tensorflow-tools/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "http-server": "http-server",
+    "lint": "eslint .",
+    "sync": "echo Syncing. Please wait ... && git pull && git submodule init && git submodule update && npm run update",
+    "pretest": "npm run lint",
+    "test": "mocha --recursive",
+    "update": "npm install npm-check-updates && npm run update-deps && npm install && npm test",
+    "update-deps": "npm prune && ncu -u -a &&  npm update"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "protobufjs": "^6.8.4"
+  },
+  "devDependencies": {
+    "assert": "latest",
+    "eslint": "^4.15.0",
+    "eslint-config-google": "^0.9.1",
+    "finalhandler": "^1.1.0",
+    "mocha": "latest",
+    "npm-check-updates": "^2.14.0",
+    "serve-static": "^1.13.1"
+  }
+}
